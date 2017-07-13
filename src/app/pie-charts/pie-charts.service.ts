@@ -49,6 +49,8 @@ export class PieChartsService {
                 chartType: 'PieChart',
                 dataTable : pieChartData,
                 options: {
+                  chartArea: {width: 400, height: 400},
+                  height:300,
                   slices: accounts
                               .reduce((acc, curr, i) => { 
       	                        	acc[i] = {color: curr.legend}; 
