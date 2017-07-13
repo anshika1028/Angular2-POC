@@ -1,0 +1,27 @@
+
+<div class="grid">
+    <table>
+        <tr>
+            <th>NAME</th>
+            <th>MARKET VALUE</th>
+            <th>CASH</th>
+            <th>LEGEND</th>
+        </tr>
+        <tr *ngFor="let account of accounts">
+            <td>{{account.name}}</td>
+            <td>{{account.marketValue | currency:'USD':true }}</td>
+            <td>{{account.cash | currency:'USD':true }}</td>
+            <td>
+                <div id="legend" [style.background-color]="account.legend"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Totals</td>
+            <td>{{accountTotal.marketValue | currency:'USD':true }}</td>
+            <td>{{accountTotal.cash | currency:'USD':true }}</td>
+            <td>
+                <div id="legend" [style.background-color]="accountTotal.legend"></div>
+            </td>
+        </tr>
+    </table>
+</div>
