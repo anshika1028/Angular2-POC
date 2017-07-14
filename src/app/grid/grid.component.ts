@@ -17,9 +17,9 @@ export class GridComponent implements OnDestroy {
     constructor(private commonService: CommonService) {
         // subscribe to home component accounts
         this.subscription = this.commonService.getAccounts()
-            .subscribe((state: {accounts:Account[], total:Account }) => { 
+            .subscribe((state: {accounts:Account[], accountTotal:Account }) => { 
                 this.accounts = state.accounts;
-                this.accountTotal = state.total;
+                this.accountTotal = state.accountTotal;
             });
     }
 

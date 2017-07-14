@@ -22,9 +22,9 @@ export class AccountsComponent implements OnInit, OnDestroy {
     ) {
         // subscribe to home component accounts
         this.subscription = this.commonService.getAccounts().subscribe(
-            (state: {accounts:Account[], total:Account }) => {
+            (state: {accounts:Account[], accountTotal:Account }) => {
                 this.accounts = state.accounts;
-                this.accountTotal = state.total;
+                this.accountTotal = state.accountTotal;
             });
     }
     

@@ -6,11 +6,11 @@ import { Account } from '../common-classes/account';
 @Injectable()
 export class CommonService {
     private initialState;
-  	subject = new Subject<{accounts:Account [], total:Account}>();
+  	subject = new Subject<{accounts:Account [], accountTotal:Account}>();
 
   	constructor() { }
  
-    getAccounts(): Observable<{accounts:Account [], total:Account}> {
+    getAccounts(): Observable<{accounts:Account [], accountTotal:Account}> {
         return this.subject.asObservable();
     }
     

@@ -6,7 +6,7 @@ import { Account } from '../common-classes/account';
 import { CommonService } from '../services/common.service';
 @Injectable()
 export class AccountsService {
-	localState;
+	  localState;
     accountTotal: Account;
     subscription: Subscription;
     accounts:  Account[];
@@ -32,7 +32,7 @@ export class AccountsService {
             {name: 'Account3', marketValue: 1948954.00, cash: 1936954.00, legend:this.getRandomColor()}
           ];
         accountTotal = this.calcTotals(accounts);
-        this.localState = {accounts: accounts, total:accountTotal }
+        this.localState = {accounts: accounts, accountTotal:accountTotal }
         this.commonService.subject.next(this.localState);
     }
 
