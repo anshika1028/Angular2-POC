@@ -17,7 +17,7 @@ export class PieChartsService {
 
 	constructor(private commonService: CommonService) {
 	    this.subscription = this.commonService.getAccounts().subscribe(
-	    	(state: {accounts:Account[], total:Account }) => { 
+	    	(state: {accounts:Account[], accountTotal:Account }) => { 
 	        	this.accounts = state.accounts;
 	        	this.populatePieChart(this.accounts);
 	    	}
